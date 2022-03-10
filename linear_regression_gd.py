@@ -24,17 +24,16 @@ def plot_logs(ytest,ypred):
 
 class LinearRegressionGD:
 
-    def __init__(self, alpha = 0.5, iterations = 10000, lr = 5e-2):
+    def __init__(self, iterations = 10000, lr = 5e-2):
         self.iterations = iterations
         self.lr = lr
-        self.alpha = alpha
         self.weights = None
         self.bias = 0
         self.train_loss=[]
         self.val_loss=[]
 
     def fit(self,x,y,val_data=None):
-        self.weights = np.zeros((x.shape[1],))+self.alpha
+        self.weights = np.zeros((x.shape[1],))+0.5
         iter_factor = self.iterations/10
         if val_data is not None:
             for i in range(self.iterations):
