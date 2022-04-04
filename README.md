@@ -4,7 +4,7 @@
 Gradient Descent is an algorithm to minimize the loss function by updating the 
 weights and bias
 
-W - weight matrix
+W - weight matrix, 
 b - bias 
 
 `yh = WX + b`
